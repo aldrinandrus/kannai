@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kannai Agro Tourism Website
+
+Marketing website for **Kannai Agro Tourism Centre** in Gharpi, Maharashtra — built with Next.js, TypeScript, and Tailwind CSS.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Extracting Images from PDF
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To re-extract brochure images:
 
-## Learn More
+```bash
+python scripts/extract-pdf-images.py
+```
 
-To learn more about Next.js, take a look at the following resources:
+Requires Python with PyMuPDF (installed automatically on first run). Update the PDF path in the script if needed.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Image mappings are defined in `content/images.ts`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+```
+app/           # Next.js pages and API routes
+components/    # Reusable UI components
+content/       # Brochure text and image mappings
+lib/           # SEO helpers and JSON-LD
+public/images/ # Extracted brochure and page images
+scripts/       # PDF image extraction
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Pages
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Home** — Hero, intro, climate stats, quick links
+- **About** — Gharpi village, climate, landscape
+- **Stay** — Cottage, bedroom, digital detox, washrooms
+- **Dining** — Organic restaurant and kitchen
+- **Explore** — Trails, water features, waterfall
+- **Flora** — Plantations and rare trees
+- **Fauna** — Birds, wildlife, farms
+- **Sustainability** — Solar farm and green energy
+- **How to Reach** — Airports, trains, buses via Sawantwadi
+- **Contact** — Phone, email, map
+
+## Deployment
+
+Deploy to [Vercel](https://vercel.com):
+
+1. Push the repository to GitHub
+2. Import the project in Vercel
+3. Add environment variables if needed
+4. Point `kannaiagrotourism.com` to Vercel
+
+```bash
+npm run build
+```
+
+## Tech Stack
+
+- Next.js 15 (App Router)
+- TypeScript
+- Tailwind CSS v4
