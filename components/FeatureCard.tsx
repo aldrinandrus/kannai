@@ -13,9 +13,13 @@ export function FeatureCard({ title, description, icon }: FeatureCardProps) {
         </div>
       )}
       {title ? (
-        <h3 className="font-serif text-xl font-semibold text-forest">{title}</h3>
+        <h3 className="font-serif text-xl leading-snug font-semibold text-forest">
+          {title}
+        </h3>
       ) : null}
-      <p className={`text-sm leading-relaxed text-muted ${title ? "mt-3" : ""}`}>
+      <p
+        className={`text-sm leading-relaxed text-muted ${title ? "mt-4" : ""}`}
+      >
         {description}
       </p>
     </div>

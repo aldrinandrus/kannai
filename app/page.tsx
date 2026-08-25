@@ -4,8 +4,9 @@ import { StatBlock } from "@/components/StatBlock";
 import { FeatureCard } from "@/components/FeatureCard";
 import { CTABanner } from "@/components/CTABanner";
 import { PullQuote, QuickLinkCard } from "@/components/ContentBlock";
+import { PhotoSlider } from "@/components/PhotoSlider";
 import { site } from "@/content/site";
-import { images } from "@/content/images";
+import { discoverLinks, homeSlides, images } from "@/content/images";
 import { lodgingJsonLd, touristAttractionJsonLd } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,8 +25,21 @@ export default function HomePage() {
         image={images.hero}
         title={site.name}
         subtitle={`${site.tagline} ${site.location}.`}
+        cta={{ href: "#gallery", label: "See Kannai in Photos" }}
         priority
       />
+
+      <section id="gallery" className="bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            title="A Glimpse of Kannai"
+            subtitle="Slide through the cottage, kitchen, trails, plantations, and wildlife. Tap any photo to open that part of the stay."
+          />
+          <div className="mt-12">
+            <PhotoSlider slides={homeSlides} />
+          </div>
+        </div>
+      </section>
 
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -46,7 +60,7 @@ export default function HomePage() {
 
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {site.highlights.map((highlight) => (
-              <FeatureCard key={highlight} title="" description={highlight} />
+              <FeatureCard key={highlight} description={highlight} />
             ))}
           </div>
         </div>
@@ -65,10 +79,10 @@ export default function HomePage() {
               />
             </div>
             <div>
-              <h2 className="font-serif text-3xl font-semibold text-forest">
+              <h2 className="font-serif text-3xl leading-snug font-semibold text-forest">
                 A Pure Agro-Tourism Experience
               </h2>
-              <div className="mt-3 h-1 w-12 rounded-full bg-terracotta" />
+              <div className="mt-5 h-1 w-12 rounded-full bg-terracotta" />
               <p className="mt-6 leading-relaxed text-muted">
                 {site.intro} The place receives an average annual rainfall of 6000
                 millimetres. The temperature drops to 20° C during monsoon (June –
@@ -109,38 +123,20 @@ export default function HomePage() {
 
       <section className="bg-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading title="Discover Kannai" />
+          <SectionHeading
+            title="Discover Kannai"
+            subtitle="Choose a path — stay, dine, walk the trails, or meet the farms."
+          />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <QuickLinkCard
-              href="/stay"
-              title="Stay"
-              description="A picturesque cottage built with traditional materials, powered by green energy."
-            />
-            <QuickLinkCard
-              href="/dining"
-              title="Dining"
-              description="Organic vegetarian and non-vegetarian meals slow-cooked on firewood."
-            />
-            <QuickLinkCard
-              href="/explore"
-              title="Explore"
-              description="Trails through plantations and four distinct water features."
-            />
-            <QuickLinkCard
-              href="/flora"
-              title="Flora"
-              description="Coffee, coconut, lemongrass, strawberries, and rare medicinal trees."
-            />
-            <QuickLinkCard
-              href="/fauna"
-              title="Fauna"
-              description="Peacocks, hornbills, organic poultry, and native wildlife."
-            />
-            <QuickLinkCard
-              href="/sustainability"
-              title="Sustainability"
-              description="Solar and hydel energy powering the entire property."
-            />
+            {discoverLinks.map((item) => (
+              <QuickLinkCard
+                key={item.href}
+                href={item.href}
+                title={item.title}
+                description={item.description}
+                image={item.image}
+              />
+            ))}
           </div>
         </div>
       </section>

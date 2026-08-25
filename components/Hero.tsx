@@ -36,11 +36,11 @@ export function Hero({
         }`}
       />
       <div className="relative z-10 mx-auto max-w-4xl px-4 py-24 text-center text-white">
-        <h1 className="font-serif text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+        <h1 className="font-serif text-4xl leading-snug font-semibold sm:text-5xl lg:text-6xl">
           {title}
         </h1>
         {subtitle && (
-          <p className="mt-6 text-lg leading-relaxed text-white/90 sm:text-xl">
+          <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-white/95 sm:text-xl">
             {subtitle}
           </p>
         )}

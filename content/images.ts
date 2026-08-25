@@ -58,3 +58,34 @@ export const galleryImages = {
   ],
   fauna: [images.poultry, images.goats, images.turtle],
 } as const;
+
+export const homeSlides = [
+  { ...images.cottage, href: "/stay", category: "Stay", caption: "The picturesque cottage" },
+  { ...images.bedroom, href: "/stay", category: "Stay", caption: "Master bedroom" },
+  { ...images.cottageVeranda, href: "/stay", category: "Stay", caption: "Cottage veranda" },
+  { ...images.restaurant, href: "/dining", category: "Dining", caption: "Open-air restaurant" },
+  { ...images.restaurantInterior, href: "/dining", category: "Dining", caption: "Organic kitchen" },
+  { ...images.trails, href: "/explore", category: "Explore", caption: "Plantation trails" },
+  { ...images.waterfall, href: "/explore", category: "Explore", caption: "Natural waterfall" },
+  { ...images.waterFeatures, href: "/explore", category: "Explore", caption: "Water features" },
+  { ...images.landscape, href: "/explore", category: "Explore", caption: "Western Ghats views" },
+  { ...images.coconut, href: "/flora", category: "Flora", caption: "Coconut plantation" },
+  { ...images.strawberry, href: "/flora", category: "Flora", caption: "Strawberry fields" },
+  { ...images.coffee, href: "/flora", category: "Flora", caption: "Coffee plantation" },
+  { ...images.pineapple, href: "/flora", category: "Flora", caption: "Pineapple farming" },
+  { ...images.lemongrass, href: "/flora", category: "Flora", caption: "Lemongrass" },
+  { ...images.faunaWildlife, href: "/fauna", category: "Fauna", caption: "Peafowl in the forest" },
+  { ...images.cows, href: "/fauna", category: "Fauna", caption: "Organic farm" },
+  { ...images.goats, href: "/fauna", category: "Fauna", caption: "Goat farm" },
+  { ...images.solar, href: "/sustainability", category: "Sustainability", caption: "Solar farm" },
+  { ...images.about, href: "/about", category: "About", caption: "Gharpi village" },
+] as const;
+
+export const discoverLinks = [
+  { href: "/stay", title: "Stay", description: "A picturesque cottage built with traditional materials, powered by green energy.", image: images.cottage },
+  { href: "/dining", title: "Dining", description: "Organic vegetarian and non-vegetarian meals slow-cooked on firewood.", image: images.restaurant },
+  { href: "/explore", title: "Explore", description: "Trails through plantations and four distinct water features.", image: images.waterfall },
+  { href: "/flora", title: "Flora", description: "Coffee, coconut, lemongrass, strawberries, and rare medicinal trees.", image: images.strawberry },
+  { href: "/fauna", title: "Fauna", description: "Peacocks, hornbills, organic poultry, and native wildlife.", image: images.faunaWildlife },
+  { href: "/sustainability", title: "Sustainability", description: "Solar and hydel energy powering the entire property.", image: images.solar },
+] as const;

@@ -36,10 +36,10 @@ export function ContentBlock({
         </div>
       )}
       <div className={image ? "" : "lg:col-span-2"}>
-        <h2 className="font-serif text-2xl font-semibold text-forest sm:text-3xl">
+        <h2 className="font-serif text-2xl leading-snug font-semibold text-forest sm:text-3xl">
           {title}
         </h2>
-        <div className="mt-3 h-1 w-12 rounded-full bg-terracotta" />
+        <div className="mt-4 h-1 w-12 rounded-full bg-terracotta" />
         <div className="mt-6 space-y-4">
           {paragraphs.map((p, i) => (
             <p key={i} className="leading-relaxed text-muted">
@@ -56,14 +56,16 @@ export function ContentBlock({
 export function PullQuote({ lines }: { lines: readonly string[] }) {
   return (
     <blockquote className="my-12 border-l-4 border-terracotta py-4 pl-6">
-      {lines.map((line, i) => (
-        <p
-          key={i}
-          className="font-serif text-xl italic text-forest/80 sm:text-2xl"
-        >
-          {line}
-        </p>
-      ))}
+      <div className="space-y-2">
+        {lines.map((line, i) => (
+          <p
+            key={i}
+            className="font-serif text-xl leading-snug italic text-forest/80 sm:text-2xl"
+          >
+            {line}
+          </p>
+        ))}
+      </div>
     </blockquote>
   );
 }
@@ -78,9 +80,12 @@ export function PageHeader({
   return (
     <div className="bg-forest py-16 text-cream">
       <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
-        <h1 className="font-serif text-4xl font-semibold sm:text-5xl">{title}</h1>
+        <h1 className="font-serif text-4xl leading-snug font-semibold sm:text-5xl">
+          {title}
+        </h1>
+        <div className="mx-auto mt-5 h-1 w-16 rounded-full bg-terracotta" />
         {subtitle && (
-          <p className="mt-4 text-lg text-cream/80">{subtitle}</p>
+          <p className="mt-6 text-lg leading-relaxed text-cream/80">{subtitle}</p>
         )}
       </div>
     </div>
@@ -91,23 +96,38 @@ export function QuickLinkCard({
   href,
   title,
   description,
+  image,
 }: {
   href: string;
   title: string;
   description: string;
+  image?: { src: string; alt: string };
 }) {
   return (
     <Link
       href={href}
-      className="group rounded-2xl border border-cream-dark bg-white p-6 shadow-sm transition-all hover:border-sage/30 hover:shadow-md"
+      className="group overflow-hidden rounded-2xl border border-cream-dark bg-white shadow-sm transition-all hover:border-sage/30 hover:shadow-md"
     >
-      <h3 className="font-serif text-xl font-semibold text-forest group-hover:text-sage">
-        {title}
-      </h3>
-      <p className="mt-2 text-sm leading-relaxed text-muted">{description}</p>
-      <span className="mt-4 inline-block text-sm font-medium text-terracotta">
-        Learn more &rarr;
-      </span>
+      {image && (
+        <div className="relative aspect-[16/10] overflow-hidden">
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 640px) 100vw, 33vw"
+          />
+        </div>
+      )}
+      <div className="p-6">
+        <h3 className="font-serif text-xl leading-snug font-semibold text-forest group-hover:text-sage">
+          {title}
+        </h3>
+        <p className="mt-3 text-sm leading-relaxed text-muted">{description}</p>
+        <span className="mt-4 inline-block text-sm font-medium text-terracotta">
+          Learn more &rarr;
+        </span>
+      </div>
     </Link>
   );
 }

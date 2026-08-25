@@ -41,10 +41,10 @@ export default function DiningPage() {
       <section className="py-20">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <div className="rounded-2xl bg-forest p-10 text-cream">
-            <h2 className="font-serif text-2xl font-semibold sm:text-3xl">
+            <h2 className="font-serif text-2xl leading-snug font-semibold sm:text-3xl">
               The Organic Kitchen
             </h2>
-            <p className="mt-4 leading-relaxed text-cream/80">
+            <p className="mt-6 leading-relaxed text-cream/85">
               Ingredients primarily grown on the property. Slow-cooked on firewood
               in brass, bronze and copper utensils. Fresh fruit juices from
               organically grown seasonal fruits.
