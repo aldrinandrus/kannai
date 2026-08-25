@@ -58,10 +58,10 @@ export default function FaunaPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2">
             <div>
-              <h3 className="font-serif text-2xl font-semibold text-forest">
+              <h3 className="font-serif text-2xl leading-snug font-semibold text-forest">
                 Native Wildlife
               </h3>
-              <div className="mt-3 h-1 w-12 rounded-full bg-terracotta" />
+              <div className="mt-4 h-1 w-12 rounded-full bg-terracotta" />
               <div className="mt-6 flex flex-wrap gap-3">
                 {wildlife.map((animal) => (
                   <span
@@ -74,10 +74,10 @@ export default function FaunaPage() {
               </div>
             </div>
             <div>
-              <h3 className="font-serif text-2xl font-semibold text-forest">
+              <h3 className="font-serif text-2xl leading-snug font-semibold text-forest">
                 On the Property
               </h3>
-              <div className="mt-3 h-1 w-12 rounded-full bg-terracotta" />
+              <div className="mt-4 h-1 w-12 rounded-full bg-terracotta" />
               <div className="mt-6 flex flex-wrap gap-3">
                 {domesticAnimals.map((animal) => (
                   <span

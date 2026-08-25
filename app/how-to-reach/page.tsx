@@ -69,12 +69,12 @@ export default function HowToReachPage() {
             </p>
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="rounded-2xl bg-forest p-6 text-cream">
-                <h3 className="font-serif text-xl font-semibold">By Train</h3>
-                <p className="mt-2 text-sm text-cream/80">{howToReach.rail}</p>
+                <h3 className="font-serif text-xl leading-snug font-semibold">By Train</h3>
+                <p className="mt-3 text-sm leading-relaxed text-cream/85">{howToReach.rail}</p>
               </div>
               <div className="rounded-2xl bg-forest p-6 text-cream">
-                <h3 className="font-serif text-xl font-semibold">By Bus</h3>
-                <p className="mt-2 text-sm text-cream/80">{howToReach.bus}</p>
+                <h3 className="font-serif text-xl leading-snug font-semibold">By Bus</h3>
+                <p className="mt-3 text-sm leading-relaxed text-cream/85">{howToReach.bus}</p>
               </div>
             </div>
           </div>

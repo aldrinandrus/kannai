@@ -47,10 +47,10 @@ export default function SustainabilityPage() {
       <section className="py-20">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <div className="rounded-2xl border border-cream-dark bg-white p-10 shadow-sm">
-            <h2 className="font-serif text-2xl font-semibold text-forest">
+            <h2 className="font-serif text-2xl leading-snug font-semibold text-forest">
               Natural Spring Water
             </h2>
-            <p className="mt-4 leading-relaxed text-muted">
+            <p className="mt-6 leading-relaxed text-muted">
               We use natural spring water with PPM not exceeding 5.5 for drinking,
               cooking and cleaning — a testament to the purity of our environment.
             </p>

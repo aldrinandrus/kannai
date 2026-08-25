@@ -24,6 +24,15 @@ export const metadata: Metadata = {
     template: `%s | ${site.shortName}`,
   },
   description: site.tagline,
+  icons: {
+    icon: [
+      { url: "/kannai-favicon-v3.ico", sizes: "any" },
+      { url: "/favicon.ico?v=3", sizes: "48x48", type: "image/x-icon" },
+      { url: "/logo.png?v=3", type: "image/png" },
+    ],
+    shortcut: "/kannai-favicon-v3.ico",
+    apple: "/logo.png?v=3",
+  },
   keywords: [
     "agro tourism",
     "Gharpi",
@@ -40,6 +49,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: site.name,
     description: site.tagline,
+    images: [{ url: "/logo.png", alt: site.name }],
   },
 };
 

@@ -29,10 +29,10 @@ export function PlantationSection({
         />
       </div>
       <div>
-        <h3 className="font-serif text-2xl font-semibold text-forest sm:text-3xl">
+        <h3 className="font-serif text-2xl leading-snug font-semibold text-forest sm:text-3xl">
           {title}
         </h3>
-        <div className="mt-3 h-1 w-12 rounded-full bg-terracotta" />
+        <div className="mt-4 h-1 w-12 rounded-full bg-terracotta" />
         <p className="mt-6 leading-relaxed text-muted">{description}</p>
       </div>
     </div>

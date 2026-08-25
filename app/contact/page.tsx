@@ -22,10 +22,10 @@ export default function ContactPage() {
 
       <section className="py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-2xl font-semibold text-forest">
+          <h2 className="font-serif text-2xl leading-snug font-semibold text-forest">
             Get in Touch
           </h2>
-          <div className="mt-3 h-1 w-12 rounded-full bg-terracotta" />
+          <div className="mt-4 h-1 w-12 rounded-full bg-terracotta" />
           <p className="mt-6 leading-relaxed text-muted">
             For bookings, travel arrangements, or any questions about your visit,
             please reach out. We can arrange travel from Sawantwadi for our

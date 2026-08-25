@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { site } from "@/content/site";
@@ -9,13 +10,27 @@ export function Nav() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-cream-dark/60 bg-cream/95 backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="group" onClick={() => setOpen(false)}>
-          <span className="font-serif text-xl font-semibold text-forest sm:text-2xl">
-            Kannai
-          </span>
-          <span className="block text-xs tracking-widest text-sage uppercase">
-            Agro Tourism
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <Link
+          href="/"
+          className="flex items-center gap-3"
+          onClick={() => setOpen(false)}
+        >
+          <Image
+            src="/logo.png"
+            alt=""
+            width={48}
+            height={48}
+            className="h-11 w-11 rounded-full sm:h-12 sm:w-12"
+            priority
+          />
+          <span>
+            <span className="font-serif text-xl font-semibold text-forest sm:text-2xl">
+              Kannai
+            </span>
+            <span className="block text-xs tracking-widest text-sage uppercase">
+              Agro Tourism
+            </span>
           </span>
         </Link>
 

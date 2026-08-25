@@ -21,8 +21,12 @@ export function CTABanner({
   return (
     <section className="bg-forest py-16 text-cream">
       <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
-        <h2 className="font-serif text-3xl font-semibold sm:text-4xl">{title}</h2>
-        <p className="mt-4 text-cream/80">{description}</p>
+        <h2 className="font-serif text-3xl leading-snug font-semibold sm:text-4xl">
+          {title}
+        </h2>
+        <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-cream/85">
+          {description}
+        </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link
             href="/contact"

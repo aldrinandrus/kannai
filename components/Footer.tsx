@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { site } from "@/content/site";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
@@ -9,8 +10,19 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <h3 className="font-serif text-2xl font-semibold">{site.shortName}</h3>
-            <p className="mt-2 text-sm text-cream/70">{site.location}</p>
+            <Link href="/" className="inline-flex items-center gap-3">
+              <Image
+                src="/logo.png"
+                alt=""
+                width={56}
+                height={56}
+                className="h-14 w-14 rounded-full"
+              />
+              <h3 className="font-serif text-2xl leading-snug font-semibold">
+                {site.shortName}
+              </h3>
+            </Link>
+            <p className="mt-3 text-sm text-cream/70">{site.location}</p>
             <p className="mt-4 text-sm leading-relaxed text-cream/80">
               {site.tagline}
             </p>
