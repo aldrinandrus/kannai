@@ -5,6 +5,7 @@ import { FeatureCard } from "@/components/FeatureCard";
 import { CTABanner } from "@/components/CTABanner";
 import { PullQuote, QuickLinkCard } from "@/components/ContentBlock";
 import { PhotoSlider } from "@/components/PhotoSlider";
+import { OfferingsGrid } from "@/components/OfferingsGrid";
 import { site } from "@/content/site";
 import { discoverLinks, homeSlides, images } from "@/content/images";
 import { lodgingJsonLd, touristAttractionJsonLd } from "@/lib/seo";
@@ -25,7 +26,7 @@ export default function HomePage() {
         image={images.hero}
         title={site.name}
         subtitle={`${site.tagline} ${site.location}.`}
-        cta={{ href: "#gallery", label: "See Kannai in Photos" }}
+        cta={{ href: "#offerings", label: "See What We Offer" }}
         priority
       />
 
@@ -40,6 +41,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <OfferingsGrid />
 
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

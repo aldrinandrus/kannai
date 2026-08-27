@@ -28,8 +28,8 @@ export default function ContactPage() {
           <div className="mt-4 h-1 w-12 rounded-full bg-terracotta" />
           <p className="mt-6 leading-relaxed text-muted">
             For bookings, travel arrangements, or any questions about your visit,
-            please reach out. We can arrange travel from Sawantwadi for our
-            guests.
+            please reach out. We can arrange travel from nearby airports, railway
+            stations, and bus stops.
           </p>
 
           <div className="mt-10 grid gap-8 sm:grid-cols-2">
@@ -64,15 +64,20 @@ export default function ContactPage() {
               <h3 className="text-sm font-semibold uppercase tracking-wider text-sage">
                 WhatsApp
               </h3>
-              <a
-                href={getWhatsAppUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 inline-flex items-center gap-3 rounded-full bg-[#25D366] px-5 py-2.5 text-white transition-opacity hover:opacity-90"
-              >
-                <WhatsAppIcon className="h-5 w-5" />
-                <span className="text-lg font-medium">+91 {site.contact.whatsapp}</span>
-              </a>
+              <div className="mt-2 flex flex-col gap-2">
+                {site.contact.whatsappNumbers.map((phone) => (
+                  <a
+                    key={phone}
+                    href={getWhatsAppUrl(undefined, phone)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 rounded-full bg-[#25D366] px-5 py-2.5 text-white transition-opacity hover:opacity-90"
+                  >
+                    <WhatsAppIcon className="h-5 w-5" />
+                    <span className="text-lg font-medium">+91 {phone}</span>
+                  </a>
+                ))}
+              </div>
             </div>
 
             <div>
@@ -98,6 +103,31 @@ export default function ContactPage() {
             </div>
           </div>
 
+          <div className="mt-16">
+            <h3 className="font-serif text-2xl leading-snug font-semibold text-forest">
+              Travel We Can Arrange
+            </h3>
+            <div className="mt-4 h-1 w-12 rounded-full bg-terracotta" />
+            <p className="mt-6 leading-relaxed text-muted">
+              {site.howToReach.pickup.intro}
+            </p>
+
+            <div className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+              <PickupList
+                title="Airports"
+                items={site.howToReach.pickup.airports}
+              />
+              <PickupList
+                title="Railway stations"
+                items={site.howToReach.pickup.stations}
+              />
+              <PickupList
+                title="Bus stops"
+                items={site.howToReach.pickup.busStops}
+              />
+            </div>
+          </div>
+
           <div className="mt-12 overflow-hidden rounded-2xl border border-cream-dark shadow-sm">
             <iframe
               title={`Map — ${site.howToReach.mapsQuery}`}
@@ -113,5 +143,31 @@ export default function ContactPage() {
         </div>
       </section>
     </>
+  );
+}
+
+function PickupList({
+  title,
+  items,
+}: {
+  title: string;
+  items: readonly { name: string; distance: string; time: string }[];
+}) {
+  return (
+    <div>
+      <h4 className="text-sm font-semibold tracking-wider text-sage uppercase">
+        {title}
+      </h4>
+      <ul className="mt-4 space-y-4">
+        {items.map((item) => (
+          <li key={item.name}>
+            <p className="font-medium text-forest">{item.name}</p>
+            <p className="mt-0.5 text-sm text-muted">
+              {item.distance} · {item.time}
+            </p>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

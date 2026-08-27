@@ -36,7 +36,7 @@ export function lodgingJsonLd() {
       "Experience the generosity of nature at a pure agro-tourism centre in Gharpi, Maharashtra.",
     url: baseUrl,
     email: "josekannai@gmail.com",
-    telephone: ["+919869504759", "+917588718544"],
+    telephone: ["+919869504759", "+917588718544", "+918691884759"],
     address: {
       "@type": "PostalAddress",
       streetAddress: "Gharpi",

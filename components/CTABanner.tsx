@@ -12,8 +12,8 @@ const buttonSecondaryClass =
   "rounded-full border border-cream/30 px-8 py-3 text-sm font-medium text-cream transition-colors hover:bg-cream/10";
 
 export function CTABanner({
-  title = "Plan Your Visit",
-  description = "Experience the generosity of nature. Contact us to arrange your stay at Kannai Agro Tourism Centre.",
+  title = "Come for a Break",
+  description = "Leave with a better you. Book your stay in advance — counselling, farm tours, meditation, and farm-fresh meals are included.",
   secondaryHref = "/how-to-reach#directions",
   secondaryLabel = "How to Reach",
   secondaryExternal = false,
