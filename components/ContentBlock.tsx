@@ -55,18 +55,18 @@ export function ContentBlock({
 
 export function PullQuote({ lines }: { lines: readonly string[] }) {
   return (
-    <blockquote className="my-12 border-l-4 border-terracotta py-4 pl-6">
-      <div className="space-y-2">
+    <section className="px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
+      <blockquote className="mx-auto max-w-2xl border-l-4 border-terracotta py-1 pl-5 sm:pl-6">
         {lines.map((line, i) => (
           <p
             key={i}
-            className="font-serif text-xl leading-snug italic text-forest/80 sm:text-2xl"
+            className="font-serif text-xl leading-relaxed italic text-forest/80 sm:text-2xl"
           >
             {line}
           </p>
         ))}
-      </div>
-    </blockquote>
+      </blockquote>
+    </section>
   );
 }
 

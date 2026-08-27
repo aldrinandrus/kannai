@@ -27,7 +27,7 @@ export default function StayPage() {
         subtitle="A picturesque human nest in the midst of unmatchable beauty"
       />
 
-      <section className="py-20">
+      <section className="pt-16 pb-8 sm:pt-20 sm:pb-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <ContentBlock
             title={stay.cottage.title}
@@ -39,7 +39,7 @@ export default function StayPage() {
 
       <PullQuote lines={site.poetry.lines} />
 
-      <section className="bg-white py-20">
+      <section className="bg-white pt-8 pb-16 sm:pt-10 sm:pb-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <ContentBlock
             title={stay.bedroom.title}

@@ -69,7 +69,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-white py-20">
+      <section className="bg-white pt-16 pb-8 sm:pt-20 sm:pb-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
@@ -106,7 +106,7 @@ export default function HomePage() {
 
       <PullQuote lines={site.poetry.lines} />
 
-      <section className="py-20">
+      <section className="pt-8 pb-16 sm:pt-10 sm:pb-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Nearby Attractions"
