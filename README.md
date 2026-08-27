@@ -23,6 +23,18 @@ Requires Python with PyMuPDF (installed automatically on first run). Update the 
 
 Image mappings are defined in `content/images.ts`.
 
+## Extracting Amenity Icons from the Flyer
+
+The "Free 8's We Offer" badges are lifted straight from the printed flyer so
+they match it exactly:
+
+```bash
+node scripts/extract-amenity-icons.mjs path/to/flyer.jpg
+```
+
+This writes white-on-transparent PNGs to `public/images/amenities/`, named after
+the `id` of each entry in `site.offerings.items`.
+
 ## Project Structure
 
 ```
@@ -30,8 +42,8 @@ app/           # Next.js pages and API routes
 components/    # Reusable UI components
 content/       # Brochure text and image mappings
 lib/           # SEO helpers and JSON-LD
-public/images/ # Extracted brochure and page images
-scripts/       # PDF image extraction
+public/images/ # Extracted brochure, page, and amenity icon images
+scripts/       # PDF image and flyer icon extraction
 ```
 
 ## Pages

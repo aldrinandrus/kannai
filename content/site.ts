@@ -7,8 +7,9 @@ export const site = {
   contact: {
     website: "www.kannaiagrotourism.com",
     email: "josekannai@gmail.com",
-    phones: ["9869504759", "7588718544"],
+    phones: ["9869504759", "7588718544", "8691884759"],
     whatsapp: "7588718544",
+    whatsappNumbers: ["7588718544", "8691884759"],
     whatsappMessage:
       "Hi, I would like to inquire about a visit to Kannai Agro Tourism Centre.",
     designCredit: "Simple And Direct",
@@ -72,16 +73,80 @@ export const site = {
       "kiss the soft grass underneath",
     ],
   },
-  howToReach: {
-    intro: `The nearest airports are Dabolim/Mopa Airport (Goa), Sindhudurg Airport, and Kolhapur Airport. All these airports are well connected to a small Konkan town called Sawantwadi from where Gharpi is just an hour's drive.`,
-    rail: "Sawantwadi also has a railway station with direct trains from Mumbai, Mangalore, and Madgaon.",
-    bus: "There are also direct buses to Sawantwadi from Mumbai and Pune.",
-    transport: "Travel from Sawantwadi could be arranged by us for our guests. For any information regarding how to reach here, one can contact us via a phone call or an email.",
-    airports: [
-      "Dabolim/Mopa Airport (Goa)",
-      "Sindhudurg Airport",
-      "Kolhapur Airport",
+  offerings: {
+    heading: "Free 8's We Offer",
+    subtitle:
+      "Where nature heals, and moments stay with you. These eight inclusions come with your stay.",
+    promise: "Come for a break, leave with a better you.",
+    bookingNote: "Book your stay in advance.",
+    items: [
+      {
+        id: "digital-detox",
+        title: "Digital Detox",
+        description: "Disconnect to reconnect with what truly matters.",
+      },
+      {
+        id: "farm-fresh-food",
+        title: "Organically Grown Farm Fresh Food",
+        description: "Pure, natural, and grown with care.",
+      },
+      {
+        id: "high-oxygen",
+        title: "High Oxygen Air",
+        description: "Breathe deeply. Live fully.",
+      },
+      {
+        id: "counselling",
+        title: "Free Counselling by an Experienced Counsellor",
+        description: "Talk. Heal. Grow with guidance from experience.",
+      },
+      {
+        id: "wifi",
+        title: "Free WiFi",
+        description: "Stay connected for work in our restaurant area.",
+      },
+      {
+        id: "meditation",
+        title: "Free Guided Meditation",
+        description: "Calm your mind. Find your center.",
+      },
+      {
+        id: "farm-tour",
+        title: "Free Farm Tour",
+        description: "Explore. Learn. Connect.",
+      },
+      {
+        id: "boating",
+        title: "Free Boating for Children in Farm Pond",
+        description: "Fun, safe, and nature-filled.",
+      },
     ],
+  },
+  howToReach: {
+    intro: `The nearest airports are North Goa Mopa Airport and Dabolim Airport. Guests also arrive by train at Sawantwadi Road, Kudal, Thivim, or Madgaon, and by bus at Banda, Sawantwadi, Mapusa, or Kudal. We can arrange travel from these points to Kannai.`,
+    rail: "Sawantwadi Road, Kudal, Thivim, and Madgaon railway stations are well connected, with direct trains from cities such as Mumbai, Mangalore, and Madgaon.",
+    bus: "There are also direct buses to Sawantwadi from Mumbai and Pune.",
+    transport: "Travel from nearby airports, railway stations, and bus stops can be arranged by us for our guests. For any information regarding how to reach here, one can contact us via a phone call or an email.",
+    pickup: {
+      intro:
+        "We can arrange travel from nearby airports, railway stations, and bus stops. Distances and typical travel times to Kannai are listed below.",
+      airports: [
+        { name: "North Goa Mopa Airport", distance: "38 km", time: "1 hour" },
+        { name: "Dabolim Airport", distance: "90 km", time: "2 hours" },
+      ],
+      stations: [
+        { name: "Sawantwadi Road", distance: "30 km", time: "50 minutes" },
+        { name: "Kudal", distance: "50 km", time: "1 hour 10 minutes" },
+        { name: "Thivim", distance: "50 km", time: "1 hour 20 minutes" },
+        { name: "Madgaon", distance: "97 km", time: "2 hours 20 minutes" },
+      ],
+      busStops: [
+        { name: "Banda", distance: "18 km", time: "30–40 minutes" },
+        { name: "Sawantwadi", distance: "27 km", time: "50 minutes" },
+        { name: "Mapusa", distance: "54 km", time: "1 hour 20 minutes" },
+        { name: "Kudal", distance: "50 km", time: "1 hour" },
+      ],
+    },
     hub: "Sawantwadi",
     driveTime: "1 hour from Sawantwadi to Gharpi",
     address:

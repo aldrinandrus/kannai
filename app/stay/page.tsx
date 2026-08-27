@@ -79,7 +79,7 @@ export default function StayPage() {
 
       <CTABanner
         title="Book Your Stay"
-        description="Contact us to reserve the cottage and plan your peaceful retreat."
+        description="Counselling, farm tours, meditation, and farm-fresh meals are included. Book your stay in advance."
       />
     </>
   );

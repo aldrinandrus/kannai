@@ -10,6 +10,7 @@
   --terracotta: #c45c3e;
   --terracotta-light: #d4785c;
   --muted: #5a6b5e;
+  --olive: #1f3a04;
 }
 
 @theme inline {
@@ -22,6 +23,7 @@
   --color-terracotta: var(--terracotta);
   --color-terracotta-light: var(--terracotta-light);
   --color-muted: var(--muted);
+  --color-olive: var(--olive);
   --font-sans: var(--font-dm-sans);
   --font-serif: var(--font-playfair);
 }

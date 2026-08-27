@@ -44,14 +44,50 @@ export default function HowToReachPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Nearest Airports"
-            subtitle="All airports connect to Sawantwadi, your gateway to Gharpi."
+            subtitle="We can arrange pickup from these airports."
           />
-          <div className="mt-12 grid gap-6 sm:grid-cols-3">
-            {howToReach.airports.map((airport) => (
+          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+            {howToReach.pickup.airports.map((airport) => (
               <FeatureCard
-                key={airport}
-                title={airport}
-                description={`Well connected to ${howToReach.hub}`}
+                key={airport.name}
+                title={airport.name}
+                description={`${airport.distance} · ${airport.time}`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            title="Railway Stations"
+            subtitle="Typical distance and travel time to Kannai."
+          />
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {howToReach.pickup.stations.map((station) => (
+              <FeatureCard
+                key={station.name}
+                title={station.name}
+                description={`${station.distance} · ${station.time}`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            title="Bus Stops"
+            subtitle="We can arrange travel from these bus stops as well."
+          />
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {howToReach.pickup.busStops.map((stop) => (
+              <FeatureCard
+                key={stop.name}
+                title={stop.name}
+                description={`${stop.distance} · ${stop.time}`}
               />
             ))}
           </div>
@@ -133,7 +169,7 @@ export default function HowToReachPage() {
 
       <CTABanner
         title="Need Help Planning?"
-        description="Contact us to arrange pickup from Sawantwadi or for any travel information."
+        description="Contact us to arrange pickup from nearby airports, stations, or bus stops."
         secondaryHref={mapsDirectionsUrl}
         secondaryLabel="Get Directions"
         secondaryExternal
